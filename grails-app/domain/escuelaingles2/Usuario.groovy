@@ -17,6 +17,5 @@ class Usuario {
         apellidoPaterno blank:false, nullable:false
         apellidoMaterno blank:false, nullable:false 
         telefono blank:true, nullable:false
-        tipoUsuario blank:true
     }
 }

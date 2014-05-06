@@ -14,6 +14,6 @@ class Curso {
 
     static constraints = {
         alumnos nullable: true
-        profesor nullable: true        
+        profesor nullable: true
     }
 }

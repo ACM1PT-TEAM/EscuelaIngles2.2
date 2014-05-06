@@ -2,7 +2,7 @@ package escuelaingles2
 
 class Profesor extends Usuario {
 
-    List cursos
+    //List cursos
     String video
     String constancia
     

@@ -110,7 +110,7 @@
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">Profesores Altamente Certificados</h4>
-                        <p>Los que ofrecemos es un nuevo metodo, enfocandonos mas en la conversacion para que el alumno pierda el miedo desde un inicia. Para esto contamos con una planta de profesores, los cuales estan certificados y con profesores nativos para que el alumno tenga la mayor calidad de aprendizaje posible. </p>
+                        <p>Lo que ofrecemos es un nuevo metodo, enfocandonos mas en la conversacion para que el alumno pierda el miedo desde un inicio. Para esto contamos con una planta de profesores, los cuales estan certificados y con profesores nativos para que el alumno tenga la mayor calidad de aprendizaje posible. </p>
                     </div>
                 </div>
             </div>

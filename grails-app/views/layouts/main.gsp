@@ -42,12 +42,11 @@
 		            <a id="logo" class="pull-left" href="${createLink(uri: '/')}"></a>
 		            <div class="nav-collapse collapse pull-right">
 		                <ul class="nav">
-		                    <li class="active"><a href="${createLink(uri: '/')}">Inicio</a></li>
-		                    <li><a href="about-us.html">Nosotros</a></li>
-		                    <li><a href="services.html">Certificaciones</a></li>
-		                    <li><a href="portfolio.html">Experiencia</a></li>
-		                    <li><a href="blog.html">Cursos</a></li> 
-		                    <li><a href="contact-us.html">Contacto</a></li>
+		                    <li class="active"><a href="${createLink(uri: '/')}">Inicio</a></li>		                   
+		                    <li><g:link controller="curso" action="index">Cursos</g:link></li>
+                                    <li class="registro">
+		                        <a data-toggle="modal" href="#registroForm">Registro</a>
+		                    </li>
 		                    <li class="login">
 		                        <a data-toggle="modal" href="#loginForm"><i class="icon-lock"></i></a>
 		                    </li>

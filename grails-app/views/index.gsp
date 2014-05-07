@@ -23,7 +23,7 @@
                         <img class="pull-right" src="images/sample/slider/img1.png" alt="" />
                         <h2>Moy es el mas Capo</h2>
                         <h3 class="gap">Pero le dicen papito mi rey</h3>
-                        <a class="btn btn-large btn-transparent" href="${createLink(uri: '/')}">Conoce Mas</a>
+                        <a class="btn btn-large btn-transparent" href="${createLink(uri: '/alumno/create')}">Inscribete ya</a>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                         <img class="pull-right" src="images/sample/slider/img2.png" alt="" />
                         <h2>Se va a volver loca</h2>
                         <h3 class="gap">Mi pija en tu boca</h3>
-                        <a class="btn btn-large btn-transparent" href="${createLink(uri: '/')}">Conoce mas</a>
+                        <a class="btn btn-large btn-transparent" href="${createLink(uri: '/curso/index')}">Conoce nuestros cursos</a>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                     <img class="pull-right" src="images/sample/slider/img3.png" alt="" />
                     <h2>Se van a pelear</h2>
                     <h3 class="gap">Mi pija y tu paladar</h3>
-                    <a class="btn btn-large btn-transparent" href="${createLink(uri: '/')}">Conoce Mas</a>
+                    <a class="btn btn-large btn-transparent" href="${createLink(uri: '/profesor/create')}">Quieres impartir un curso</a>
                 </div>
             </div>
         </div>
@@ -239,7 +239,7 @@
     <div class="container">
         <div class="row-fluid">
             <div class="span5 cp">
-                &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.
+               <!-- &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>. All Rights Reserved.-->
             </div>
             <!--/Copyright-->
 
@@ -268,6 +268,23 @@
 </footer>
 <!--/Footer-->
 
+<!-- Registro form -->
+<div class="modal hide fade in" id="registroForm" aria-hidden="false">
+    <div class="modal-header">
+        <i class="icon-remove" data-dismiss="modal" aria-hidden="true"></i>
+        <h4>Registro</h4>
+    </div>
+    <!--Modal Body-->
+    <div class="modal-body">
+        <form class="form-inline" action="index.html" method="post" id="form-registro">
+            <button class="btn btn-primary">Profesor</button>
+            <button type="submit" class="btn btn-primary">Alumno</button>
+        </form>
+    </div>
+    <!--/Modal Body-->
+ </div>
+ <!--  /Registro form -->                        
+                        
 <!--  Login form -->
 <div class="modal hide fade in" id="loginForm" aria-hidden="false">
     <div class="modal-header">

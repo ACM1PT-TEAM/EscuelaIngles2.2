@@ -6,10 +6,11 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'curso.label', default: 'Curso')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
+                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
 	</head>
-	<body>
+	<body class="listas">
 		<a href="#list-curso" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
+		<div class="nav" role="navigation" id="menu_opciones">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>

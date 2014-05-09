@@ -183,7 +183,7 @@ img {
 }
 
 .nav a {
-	color: #333333;
+	color: #333;
 	display: block;
 	padding: 0.5em;
         font-size: large;
@@ -549,8 +549,9 @@ th {
 	//background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
 	    //filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#B3B3B3', EndColorStr = '#2dcc70');
 	//-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
-	color: #333333;
+	color: #404040;
 	font-weight: bold;
+        font-size:17px;
 	line-height: 1.7em;
 	padding: 0.2em 0.6em;
 }
@@ -577,7 +578,10 @@ th.sortable a {
 	background-position: right;
 	background-repeat: no-repeat;
 	padding-right: 1.1em;
-        color: #191919
+        color: #404040
+}
+th.sortable:hover a {
+        color: #333
 }
 
 th.asc a {
@@ -598,7 +602,7 @@ th.desc a {
 
 th:hover, tr:hover {
 	background-color: #3498DB;
-        color: #686868
+        color: #333;
 }
 
 /* PAGINATION */

@@ -12,8 +12,8 @@
 		<a href="#list-curso" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation" id="menu_opciones">
 			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><a class="home" href="${createLink(uri: '/')}">INICIO</a></li>
+				<!--<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>-->
 			</ul>
 		</div>
 		<div id="list-curso" class="content scaffold-list" role="main">
@@ -27,9 +27,7 @@
 					
 						<th><g:message code="curso.profesor.label" default="Profesor" /></th>
 					
-						<g:sortableColumn property="aceptado" title="${message(code: 'curso.aceptado.label', default: 'Aceptado')}" />
-					
-						<g:sortableColumn property="activo" title="${message(code: 'curso.activo.label', default: 'Activo')}" />
+						<!--<g:sortableColumn property="activo" title="${message(code: 'curso.activo.label', default: 'Activo')}" />-->
 					
 						<g:sortableColumn property="dias" title="${message(code: 'curso.dias.label', default: 'Dias')}" />
 					
@@ -63,5 +61,48 @@
 				<g:paginate total="${cursoInstanceCount ?: 0}" />
 			</div>
 		</div>
+                
+<!-- Registro form -->
+<div class="modal hide fade in" id="registroForm" aria-hidden="false">
+    <div class="modal-header">
+        <i class="icon-remove" data-dismiss="modal" aria-hidden="true"></i>
+        <h4>Registro</h4>
+    </div>
+    <!--Modal Body-->
+    <div class="modal-body">
+        <form class="form-inline">
+            <ul>
+                <a><g:link controller="profesor" class="boton" action="create">Profesor</g:link></a>
+                <a><g:link controller="alumno" class="boton" action="create">Alumno</g:link></a>
+            </ul>
+        </form>
+    </div>
+    <!--/Modal Body-->
+ </div>
+ <!--  /Registro form -->                        
+                        
+<!--  Login form -->
+<div class="modal hide fade in" id="loginForm" aria-hidden="false">
+    <div class="modal-header">
+        <i class="icon-remove" data-dismiss="modal" aria-hidden="true"></i>
+        <h4>Login Form</h4>
+    </div>
+    <!--Modal Body-->
+    <div class="modal-body">
+        <form class="form-inline" action="index.html" method="post" id="form-login">
+            <input type="text" class="input-small" placeholder="Email">
+            <input type="password" class="input-small" placeholder="Password">
+            <label class="checkbox">
+                <input type="checkbox"> Recordarme
+            </label>
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+        <a href="#">Olvidaste tu contraseña?</a>
+    </div>
+    <!--/Modal Body-->
+</div>
+<!--  /Login form -->
+
+
 	</body>
 </html>

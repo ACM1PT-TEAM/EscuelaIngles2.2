@@ -21,8 +21,8 @@
                 <div class="sl-slide-inner">
                     <div class="container">
                         <img class="pull-right" src="images/sample/slider/img1.png" alt="" />
-                        <h2>Moy es el mas Capo</h2>
-                        <h3 class="gap">Pero le dicen papito mi rey</h3>
+                        <h2>Aprende ingles!</h2>
+                        <h3 class="gap">No lo pienses más</h3>
                         <a class="btn btn-large btn-transparent" href="${createLink(uri: '/alumno/create')}">Inscribete ya</a>
                     </div>
                 </div>
@@ -34,8 +34,8 @@
                 <div class="sl-slide-inner">
                     <div class="container">
                         <img class="pull-right" src="images/sample/slider/img2.png" alt="" />
-                        <h2>Se va a volver loca</h2>
-                        <h3 class="gap">Mi pija en tu boca</h3>
+                        <h2>¿Horarios complicados?</h2>
+                        <h3 class="gap">Tenemos una gran variedad de horarios</h3>
                         <a class="btn btn-large btn-transparent" href="${createLink(uri: '/curso/index')}">Conoce nuestros cursos</a>
                     </div>
                 </div>
@@ -47,9 +47,9 @@
                 <div class="sl-slide-inner">
                    <div class="container">
                     <img class="pull-right" src="images/sample/slider/img3.png" alt="" />
-                    <h2>Se van a pelear</h2>
-                    <h3 class="gap">Mi pija y tu paladar</h3>
-                    <a class="btn btn-large btn-transparent" href="${createLink(uri: '/profesor/create')}">Quieres impartir un curso</a>
+                    <h2>¿Eres profesor?</h2>
+                    <h3 class="gap">Forma parte de nuestro equipo</h3>
+                    <a class="btn btn-large btn-transparent" href="${createLink(uri: '/profesor/create')}">Impartir curso</a>
                 </div>
             </div>
         </div>
@@ -157,7 +157,7 @@
                         </div>
                     </div>
 
-                    <div class="item">
+                    <!--<div class="item">
                         <div class="row-fluid">
                             <ul class="thumbnails">
                                 <li class="span3"><a href="#"><img src="images/sample/clients/client1.png"></a></li>
@@ -166,7 +166,7 @@
                                 <li class="span3"><a href="#"><img src="images/sample/clients/client4.png"></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <!-- /Carousel items -->
 
@@ -266,8 +266,9 @@
         </div>
     </div>
 </footer>
-<!--/Footer-->
-
+<!--/Footer-->          
+                 
+              
 <!-- Registro form -->
 <div class="modal hide fade in" id="registroForm" aria-hidden="false">
     <div class="modal-header">
@@ -286,12 +287,12 @@
     <!--/Modal Body-->
  </div>
  <!--  /Registro form -->                        
-                        
+                      
 <!--  Login form -->
 <div class="modal hide fade in" id="loginForm" aria-hidden="false">
     <div class="modal-header">
         <i class="icon-remove" data-dismiss="modal" aria-hidden="true"></i>
-        <h4>Login Form</h4>
+        <h4>Login</h4>
     </div>
     <!--Modal Body-->
     <div class="modal-body">

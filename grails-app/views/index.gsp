@@ -276,9 +276,11 @@
     </div>
     <!--Modal Body-->
     <div class="modal-body">
-        <form class="form-inline" action="index.html" method="post" id="form-registro">
-            <button class="btn btn-primary">Profesor</button>
-            <button type="submit" class="btn btn-primary">Alumno</button>
+        <form class="form-inline">
+            <ul>
+                <a><g:link controller="profesor" class="boton" action="create">Profesor</g:link></a>
+                <a><g:link controller="alumno" class="boton" action="create">Alumno</g:link></a>
+            </ul>
         </form>
     </div>
     <!--/Modal Body-->
@@ -297,11 +299,11 @@
             <input type="text" class="input-small" placeholder="Email">
             <input type="password" class="input-small" placeholder="Password">
             <label class="checkbox">
-                <input type="checkbox"> Remember me
+                <input type="checkbox"> Recordarme
             </label>
             <button type="submit" class="btn btn-primary">Sign in</button>
         </form>
-        <a href="#">Forgot your password?</a>
+        <a href="#">Olvidaste tu contraseña?</a>
     </div>
     <!--/Modal Body-->
 </div>

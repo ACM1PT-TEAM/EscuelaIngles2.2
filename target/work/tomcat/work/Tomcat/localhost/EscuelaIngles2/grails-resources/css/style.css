@@ -306,8 +306,11 @@ fieldset,
 .fieldcontain label,
 .fieldcontain .property-label {
 	color: #666666;
-	text-align: right;
-	width: 25%;
+	text-align: left;
+	width: 50%;
+        font-size:130%;
+        margin-left:15px;
+        margin-top:-5px;
 }
 
 .fieldcontain .property-label {
@@ -410,6 +413,15 @@ ul.one-to-many {
 
 ul.one-to-many li.add {
 	list-style-type: none;
+}
+
+form.crear{
+    padding:10px 10px 10px 10px;
+    background-color: #21a6d8;
+    border:5px solid; 
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin:20px 50% 4px 40px;
 }
 
 /* EMBEDDED PROPERTIES */
@@ -699,11 +711,19 @@ th:hover, tr:hover {
 
 .buttons .save {
 	background-image: url(../images/skin/database_save.png);
+        margin-left: 27em;
+        height: 30px;
+        color:#333;
 }
 
 a.skip {
 	position: absolute;
 	left: -9999px;
+}
+
+p.instrucciones{
+    font-size:150%;
+    margin:5px 0px 20px 20px;
 }
 
 /*Index*/

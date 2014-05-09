@@ -5,7 +5,8 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'profesor.label', default: 'Profesor')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
-	</head>
+                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
+        </head>
 	<body>
 		<a href="#edit-profesor" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">

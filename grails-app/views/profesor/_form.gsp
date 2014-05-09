@@ -1,23 +1,7 @@
 <%@ page import="escuelaingles2.Profesor" %>
-
-
-
-<div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'correoElectronico', 'error')} required">
-	<label for="correoElectronico">
-		<g:message code="profesor.correoElectronico.label" default="Correo Electronico" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="email" name="correoElectronico" required="" value="${profesorInstance?.correoElectronico}"/>
+<div>
+    <p class="instrucciones">Ingrese sus datos</p>
 </div>
-
-<div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'password', 'error')} required">
-	<label for="password">
-		<g:message code="profesor.password.label" default="Password" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="password" name="password" maxlength="15" required="" value="${profesorInstance?.password}"/>
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
 		<g:message code="profesor.nombre.label" default="Nombre" />
@@ -50,6 +34,22 @@
 	<g:textField name="telefono" value="${profesorInstance?.telefono}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'correoElectronico', 'error')} required">
+	<label for="correoElectronico">
+		<g:message code="profesor.correoElectronico.label" default="Correo Electronico" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field type="email" name="correoElectronico" required="" value="${profesorInstance?.correoElectronico}"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'password', 'error')} required">
+	<label for="password">
+		<g:message code="profesor.password.label" default="Password" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field type="password" name="password" maxlength="15" required="" value="${profesorInstance?.password}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'video', 'error')} ">
 	<label for="video">
 		<g:message code="profesor.video.label" default="Video" />
@@ -65,7 +65,7 @@
 	</label>
 	<g:textField name="constancia" value="${profesorInstance?.constancia}"/>
 </div>
-
+<!--
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'cursos', 'error')} ">
 	<label for="cursos">
 		<g:message code="profesor.cursos.label" default="Cursos" />
@@ -98,13 +98,19 @@
 </li>
 </ul>
 
-</div>
+</div>-->
 
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'tipoUsuario', 'error')} ">
 	<label for="tipoUsuario">
 		<g:message code="profesor.tipoUsuario.label" default="Tipo Usuario" />
 		
 	</label>
-	<g:textField name="tipoUsuario" value="${profesorInstance?.tipoUsuario}"/>
+        <select name="tipoUsuario" size="2">
+            <option>Profesor</option>
+            <option>Alumno</option> 
+        </select>
+	
+        
+        
 </div>
 

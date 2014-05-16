@@ -6,8 +6,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'peticionAlumno.label', default: 'PeticionAlumno')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
-                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
-        </head>
+	</head>
 	<body>
 		<a href="#list-peticionAlumno" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
@@ -27,9 +26,9 @@
 					
 						<g:sortableColumn property="estado" title="${message(code: 'peticionAlumno.estado.label', default: 'Estado')}" />
 					
-						<th><g:message code="peticionAlumno.alumno.label" default="Alumno" /></th>
-					
 						<g:sortableColumn property="calificacion" title="${message(code: 'peticionAlumno.calificacion.label', default: 'Calificacion')}" />
+					
+						<th><g:message code="peticionAlumno.alumno.label" default="Alumno" /></th>
 					
 						<th><g:message code="peticionAlumno.curso.label" default="Curso" /></th>
 					
@@ -41,9 +40,9 @@
 					
 						<td><g:link action="show" id="${peticionAlumnoInstance.id}">${fieldValue(bean: peticionAlumnoInstance, field: "estado")}</g:link></td>
 					
-						<td>${fieldValue(bean: peticionAlumnoInstance, field: "alumno")}</td>
-					
 						<td>${fieldValue(bean: peticionAlumnoInstance, field: "calificacion")}</td>
+					
+						<td>${fieldValue(bean: peticionAlumnoInstance, field: "alumno")}</td>
 					
 						<td>${fieldValue(bean: peticionAlumnoInstance, field: "curso")}</td>
 					

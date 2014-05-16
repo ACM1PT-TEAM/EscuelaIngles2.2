@@ -8,6 +8,11 @@ class PeticionAlumno {
     static belongsTo = [curso:Curso, alumno:Alumno]
     
     static constraints = {
-        estado inList:["Aceptado","Rechazado","Pendiente"], nullable:true, blanck:true
+        estado inList:["Aceptado","Rechazado","Pendiente"], nullable:true, blank:true, display:false
+		calificacion display:false, nullable:true, blank:true
     }
+
+	def beforeInsert() {
+      estado = "Pendiente"
+	}
 }

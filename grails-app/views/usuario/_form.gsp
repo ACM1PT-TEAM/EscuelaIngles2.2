@@ -50,11 +50,3 @@
 	<g:textField name="telefono" value="${usuarioInstance?.telefono}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'tipoUsuario', 'error')} ">
-	<label for="tipoUsuario">
-		<g:message code="usuario.tipoUsuario.label" default="Tipo Usuario" />
-		
-	</label>
-	<g:textField name="tipoUsuario" value="${usuarioInstance?.tipoUsuario}"/>
-</div>
-

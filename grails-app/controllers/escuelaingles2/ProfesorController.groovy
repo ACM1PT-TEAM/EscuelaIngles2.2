@@ -15,6 +15,15 @@ class ProfesorController {
         respond Profesor.list(params), model:[profesorInstanceCount: Profesor.count()]
     }
 
+    def principal_profesor() {
+		def profe = Profesor.get(session.profesor.id)
+		[profe:profe]
+    }
+
+    def show_global(Profesor profesorInstance) {
+        respond profesorInstance
+    }
+
     def show(Profesor profesorInstance) {
         respond profesorInstance
     }
@@ -22,6 +31,24 @@ class ProfesorController {
     def create() {
         respond new Profesor(params)
     }
+
+	def cursosProfesor(){
+		def lista = Profesor.get(session.profesor.id).cursos
+		[lista:lista]
+	}
+
+	def calificarCurso(){
+		def curso = Curso.get(params.idCurso)
+		def peticiones = PeticionAlumno.findAllByCursoAndEstado(curso,"Aceptado")
+		[peticiones:peticiones]
+	}
+
+	def guardarCalificacion(){
+		def peticion = PeticionAlumno.get(params.peticionid)
+		peticion.calificacion = params.int('calificacion')	
+		peticion.save(flush:true)
+		redirect(uri: "/profesor/calificarCurso?idCurso=${peticion.curso.id}")	
+	}
 
     @Transactional
     def save(Profesor profesorInstance) {
@@ -40,7 +67,7 @@ class ProfesorController {
         request.withFormat {
             form {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'profesorInstance.label', default: 'Profesor'), profesorInstance.id])
-                redirect profesorInstance
+				redirect(uri: "/")
             }
             '*' { respond profesorInstance, [status: CREATED] }
         }
@@ -67,7 +94,7 @@ class ProfesorController {
         request.withFormat {
             form {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Profesor.label', default: 'Profesor'), profesorInstance.id])
-                redirect profesorInstance
+                redirect(action:"principal_profesor")
             }
             '*'{ respond profesorInstance, [status: OK] }
         }

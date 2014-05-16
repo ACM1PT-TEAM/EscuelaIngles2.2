@@ -5,8 +5,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'peticion.label', default: 'Peticion')}" />
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
-                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
-        </head>
+	</head>
 	<body>
 		<a href="#edit-peticion" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">

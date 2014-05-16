@@ -4,8 +4,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'curso.label', default: 'Curso')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
-                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
-        </head>
+	</head>
 	<body>
 		<a href="#create-curso" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">

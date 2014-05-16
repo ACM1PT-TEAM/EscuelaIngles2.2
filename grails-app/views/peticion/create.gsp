@@ -4,18 +4,10 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'peticion.label', default: 'Peticion')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
-                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
-        </head>
+	</head>
 	<body>
-		<a href="#create-peticion" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="create-peticion" class="content scaffold-create" role="main">
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
+		<div class="center">
+			<h1>Solicitar Curso</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>

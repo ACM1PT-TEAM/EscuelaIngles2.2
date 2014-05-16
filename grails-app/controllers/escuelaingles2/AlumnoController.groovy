@@ -15,6 +15,11 @@ class AlumnoController {
         respond Alumno.list(params), model:[alumnoInstanceCount: Alumno.count()]
     }
 
+	def principal_alumno(){
+		def alumno = Alumno.get(session.alumno.id)
+		[alumno:alumno]
+	}
+
     def show(Alumno alumnoInstance) {
         respond alumnoInstance
     }
@@ -67,7 +72,7 @@ class AlumnoController {
         request.withFormat {
             form {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Alumno.label', default: 'Alumno'), alumnoInstance.id])
-                redirect alumnoInstance
+                redirect(action:"principal_alumno")
             }
             '*'{ respond alumnoInstance, [status: OK] }
         }

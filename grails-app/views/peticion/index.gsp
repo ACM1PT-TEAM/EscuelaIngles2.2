@@ -6,8 +6,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'peticion.label', default: 'Peticion')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
-                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
-        </head>
+	</head>
 	<body>
 		<a href="#list-peticion" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
@@ -25,13 +24,17 @@
 			<thead>
 					<tr>
 					
+						<g:sortableColumn property="nivelCurso" title="${message(code: 'peticion.nivelCurso.label', default: 'Nivel Curso')}" />
+					
 						<g:sortableColumn property="dias" title="${message(code: 'peticion.dias.label', default: 'Dias')}" />
 					
 						<g:sortableColumn property="horarios" title="${message(code: 'peticion.horarios.label', default: 'Horarios')}" />
 					
-						<g:sortableColumn property="nivelCurso" title="${message(code: 'peticion.nivelCurso.label', default: 'Nivel Curso')}" />
-					
 						<th><g:message code="peticion.profesor.label" default="Profesor" /></th>
+
+						<th>Aceptar Curso</th>
+
+						<th>Rechazar Curso</th>
 					
 					</tr>
 				</thead>
@@ -39,13 +42,16 @@
 				<g:each in="${peticionInstanceList}" status="i" var="peticionInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${peticionInstance.id}">${fieldValue(bean: peticionInstance, field: "dias")}</g:link></td>
+						<td><g:link action="show" id="${peticionInstance.id}">${fieldValue(bean: peticionInstance, field: "nivelCurso")}</g:link></td>
+					
+						<td>${fieldValue(bean: peticionInstance, field: "dias")}</td>
 					
 						<td>${fieldValue(bean: peticionInstance, field: "horarios")}</td>
 					
-						<td>${fieldValue(bean: peticionInstance, field: "nivelCurso")}</td>
-					
-						<td>${fieldValue(bean: peticionInstance, field: "profesor")}</td>
+						<td>${fieldValue(bean: peticionInstance, field: "profesor")}</td>						
+
+						<td><g:link action="aceptarPeticion" id="${peticionInstance.id}">Aceptar</g:link></td>
+						<td><g:link action="delete" id="${peticionInstance.id}">Rechazar</g:link></td>
 					
 					</tr>
 				</g:each>

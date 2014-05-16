@@ -6,8 +6,7 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'profesor.label', default: 'Profesor')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
-                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
-        </head>
+	</head>
 	<body>
 		<a href="#show-profesor" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
@@ -78,6 +77,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${profesorInstance?.tipoUsuario}">
+				<li class="fieldcontain">
+					<span id="tipoUsuario-label" class="property-label"><g:message code="profesor.tipoUsuario.label" default="Tipo Usuario" /></span>
+					
+						<span class="property-value" aria-labelledby="tipoUsuario-label"><g:fieldValue bean="${profesorInstance}" field="tipoUsuario"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${profesorInstance?.video}">
 				<li class="fieldcontain">
 					<span id="video-label" class="property-label"><g:message code="profesor.video.label" default="Video" /></span>
@@ -114,15 +122,6 @@
 						<g:each in="${profesorInstance.peticiones}" var="p">
 						<span class="property-value" aria-labelledby="peticiones-label"><g:link controller="peticion" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></span>
 						</g:each>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${profesorInstance?.tipoUsuario}">
-				<li class="fieldcontain">
-					<span id="tipoUsuario-label" class="property-label"><g:message code="profesor.tipoUsuario.label" default="Tipo Usuario" /></span>
-					
-						<span class="property-value" aria-labelledby="tipoUsuario-label"><g:fieldValue bean="${profesorInstance}" field="tipoUsuario"/></span>
 					
 				</li>
 				</g:if>

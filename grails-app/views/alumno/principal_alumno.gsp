@@ -47,7 +47,7 @@
 
                 <div class="widget-blog-item media">
                     <div class="media-body">
-                        <a href="#"><h5>Cursos Pasados</h5></a>
+                        <a href="${createLink(controller:'alumno',action:'cursosPasados')}"><h5>Cursos Pasados</h5></a>
                     </div>
                 </div>
             </div>                        

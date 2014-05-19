@@ -15,4 +15,12 @@ class PeticionAlumno {
 	def beforeInsert() {
       estado = "Pendiente"
 	}
+
+	String toString(){
+		"$curso"
+	}
+
+	String cursoNombre(){
+		"$curso.nivelCurso"
+	}
 }

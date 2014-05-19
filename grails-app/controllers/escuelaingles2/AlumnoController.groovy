@@ -8,7 +8,22 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class AlumnoController {
 
+
+	def pdfRenderingService
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+
+	def renderFormPDF(){
+		if(!session.alumno){
+			redirect(uri:"/")
+		}
+		else{
+			def formInstance = Alumno.get(session.alumno.id)               
+			def absolutePath = request.getSession().getServletContext().getRealPath("/images/logo.png")
+			def logo = new File(absolutePath)
+			def args = [template:"pdf", model:[form:formInstance,logo: logo.bytes,nombre:params.nombre,curso:params.curso,calificacion:params.calificacion]]
+			pdfRenderingService.render(args+[controller:this],response)
+		}
+	}
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -16,8 +31,24 @@ class AlumnoController {
     }
 
 	def principal_alumno(){
-		def alumno = Alumno.get(session.alumno.id)
-		[alumno:alumno]
+		if(!session.alumno){
+			redirect(uri:"/")
+		}
+		else{
+			def alumno = Alumno.get(session.alumno.id)
+			[alumno:alumno]
+		}
+	}
+
+	def cursosPasados(){
+	if(!session.alumno){
+			redirect(uri:"/")
+		}
+		else{
+			def alumno = Alumno.get(session.alumno.id)
+			def peticiones = PeticionAlumno.findAllByEstadoAndAlumno("Aceptado",alumno)
+			[peticiones:peticiones]
+		}
 	}
 
     def show(Alumno alumnoInstance) {

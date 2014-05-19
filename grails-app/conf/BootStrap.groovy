@@ -18,6 +18,18 @@ class BootStrap {
 
 		p1.save()
 
+		def a1 = new Usuario(
+				correoElectronico:"ad@a.com",
+				password:"acm1pt",
+				nombre:"Moises",
+				apellidoPaterno:"Mascapo",
+				apellidoMaterno:"rongas",
+				telefono:"34123456",
+				tipoUsuario:"admin"
+				)
+
+		a1.save()
+
 		if(p1.hasErrors()){
 			println p1.errors
 		}
@@ -59,8 +71,8 @@ class BootStrap {
 		c1.save()
 
 		def c2 = new Curso(
-				nivelCurso:"Basico 1",
-				dias:"Lunes-Viernes",
+				nivelCurso:"Intermedio 1",
+				dias:"Sabado",
 				horario:"15-17 pm",
 				activo:false,
 				profesor:p2

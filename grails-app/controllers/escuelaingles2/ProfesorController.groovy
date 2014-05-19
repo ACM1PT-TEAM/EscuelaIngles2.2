@@ -16,8 +16,13 @@ class ProfesorController {
     }
 
     def principal_profesor() {
-		def profe = Profesor.get(session.profesor.id)
-		[profe:profe]
+		if(!session.profesor){
+			redirect(uri:"/")
+		}
+		else{
+			def profe = Profesor.get(session.profesor.id)
+			[profe:profe]
+		}
     }
 
     def show_global(Profesor profesorInstance) {
@@ -33,21 +38,36 @@ class ProfesorController {
     }
 
 	def cursosProfesor(){
-		def lista = Profesor.get(session.profesor.id).cursos
-		[lista:lista]
+		if(!session.profesor){
+			redirect(uri:"/")
+		}
+		else{
+			def lista = Profesor.get(session.profesor.id).cursos
+			[lista:lista]
+		}
 	}
 
 	def calificarCurso(){
-		def curso = Curso.get(params.idCurso)
-		def peticiones = PeticionAlumno.findAllByCursoAndEstado(curso,"Aceptado")
-		[peticiones:peticiones]
+		if(!session.profesor){
+			redirect(uri:"/")
+		}
+		else{
+			def curso = Curso.get(params.idCurso)
+			def peticiones = PeticionAlumno.findAllByCursoAndEstado(curso,"Aceptado")
+			[peticiones:peticiones]
+		}
 	}
 
 	def guardarCalificacion(){
-		def peticion = PeticionAlumno.get(params.peticionid)
-		peticion.calificacion = params.int('calificacion')	
-		peticion.save(flush:true)
-		redirect(uri: "/profesor/calificarCurso?idCurso=${peticion.curso.id}")	
+		if(!session.profesor){
+			redirect(uri:"/")
+		}
+		else{
+			def peticion = PeticionAlumno.get(params.peticionid)
+			peticion.calificacion = params.int('calificacion')	
+			peticion.save(flush:true)
+			redirect(uri: "/profesor/calificarCurso?idCurso=${peticion.curso.id}")	
+		}
 	}
 
     @Transactional

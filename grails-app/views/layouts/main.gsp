@@ -59,6 +59,9 @@
 									<g:if test="${session.user.tipoUsuario == 'profesor'}">
 										<li class="active"><a href="${createLink(controller:'profesor', action:'principal_profesor')}">Cuenta</a></li>
 									</g:if>
+									<g:if test="${session.user.tipoUsuario == 'admin'}">
+										<li class="active"><a href="${createLink(controller:'usuario', action:'principalAdmin')}">Cuenta</a></li>
+									</g:if>
 									<li class="active"><a href="${createLink(controller:'usuario', action:'logout')}">Salir</a></li>
 							</g:else>
 
@@ -124,41 +127,23 @@
                 <h4>Direccion</h4>
                 <ul class="unstyled address">
                     <li>
-                        <i class="icon-home"></i><strong>Direccion:</strong> 1032 Wayback Lane, Wantagh<br>NY 11793
+                        <i class="icon-home"></i><strong>Direccion:</strong> Insurgentes Sur<br>1305
                     </li>
                     <li>
                         <i class="icon-envelope"></i>
-                        <strong>Email: </strong> support@email.com
+                        <strong>Email: </strong> acm1pt@gmail.com
                     </li>
                     <li>
                         <i class="icon-globe"></i>
-                        <strong>Website:</strong> www.domain.com
+                        <strong>Website:</strong> www.acm1pt-ingles.com
                     </li>
                     <li>
                         <i class="icon-phone"></i>
-                        <strong>Telefono:</strong> 631-409-3105
+                        <strong>Telefono:</strong> 5039-1293
                     </li>
                 </ul>
             </div>
             <!--End Contact Form-->
-
-            <!--Important Links-->
-            <div id="tweets" class="span3">
-                <h4>Nosotros</h4>
-                <div>
-                    <ul class="arrow">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Copyright</a></li>
-                        <li><a href="#">We are hiring</a></li>
-                        <li><a href="#">Clients</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>  
-            </div>
-            <!--Important Links-->
         </div>
 
     </div>
@@ -181,15 +166,8 @@
                 <ul class="social pull-right">
                     <li><a href="#"><i class="icon-facebook"></i></a></li>
                     <li><a href="#"><i class="icon-twitter"></i></a></li>
-                    <li><a href="#"><i class="icon-pinterest"></i></a></li>
                     <li><a href="#"><i class="icon-linkedin"></i></a></li>
-                    <li><a href="#"><i class="icon-google-plus"></i></a></li>                       
-                    <li><a href="#"><i class="icon-youtube"></i></a></li>
-                    <li><a href="#"><i class="icon-tumblr"></i></a></li>                        
-                    <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                    <li><a href="#"><i class="icon-rss"></i></a></li>
-                    <li><a href="#"><i class="icon-github-alt"></i></a></li>
-                    <li><a href="#"><i class="icon-instagram"></i></a></li>                   
+                    <li><a href="#"><i class="icon-google-plus"></i></a></li>                                         
                 </ul>
             </div>
 

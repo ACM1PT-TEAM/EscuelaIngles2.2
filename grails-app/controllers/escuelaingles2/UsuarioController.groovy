@@ -19,6 +19,9 @@ class UsuarioController {
         respond usuarioInstance
     }
 
+	def principalAdmin(){
+	}
+
 	def login = {}
 	def logout = {
 		flash.message = "Vuelve Pronto ${session.user.nombre}"
@@ -32,6 +35,9 @@ class UsuarioController {
 		def user = Usuario.findByCorreoElectronicoAndPassword(params.email,params.password)
 		session.user = user
 		if(user){
+			if(user.tipoUsuario=="admin"){
+				redirect(action:"principalAdmin")
+			}			
 			if(user.tipoUsuario=="alumno"){
 				def alumno = Alumno.findByCorreoElectronicoAndPassword(params.email,params.password)
 				session.alumno = alumno

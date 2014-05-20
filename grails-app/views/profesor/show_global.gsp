@@ -78,7 +78,14 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${profesorInstance?.video}">
+                                <g:if test="${profesorInstance?.video}">
+                                    <li class="fieldcontain">
+					<span id="email-label" class="property-label"><g:message code="profesor.video.label" default="Video" /></span>
+                                        <span class="property-value" aria-labelledby="email-label"><a href="/EscuelaIngles2/files/${profesorInstance?.video}">Video</a></span>
+                                    </li>
+				</g:if>
+                                
+				<!--<g:if test="${profesorInstance?.video}">
 				<li class="fieldcontain">
 					<span id="video-label" class="property-label"><g:message code="profesor.video.label" default="Video" /></span>
 					
@@ -94,7 +101,7 @@
 						<span class="property-value" aria-labelledby="constancia-label"><g:fieldValue bean="${profesorInstance}" field="constancia"/></span>
 					
 				</li>
-				</g:if>
+				</g:if>-->
 			
 				<g:if test="${profesorInstance?.cursos}">
 				<li class="fieldcontain">

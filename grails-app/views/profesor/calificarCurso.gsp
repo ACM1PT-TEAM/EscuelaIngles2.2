@@ -7,10 +7,11 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'peticionAlumno.label', default: 'PeticionAlumno')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
+                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}"> 
 	</head>
 	<body>
 		<div class="container">
-			<h1>Calificaciones </h1>
+			<h1 class="especial">Calificaciones </h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>

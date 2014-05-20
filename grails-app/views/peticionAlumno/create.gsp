@@ -4,10 +4,11 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'peticionAlumno.label', default: 'PeticionAlumno')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
+                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
 	</head>
 	<body>
 		<div class="center">
-			<h1>Inscribir Curso</h1>
+			<h1 class="especial">Inscribir Curso</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -19,7 +20,7 @@
 			</ul>
 			</g:hasErrors>
 			<g:form url="[resource:peticionAlumnoInstance, action:'save']" >
-				<fieldset class="form">
+				<fieldset class="form" id="registro">
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">

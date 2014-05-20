@@ -13,12 +13,12 @@
         <div class="container">
             <div class="row-fluid">
                 <div class="span6">
-                    <h1>Cuenta Alumno</h1>
+                    <h1>Cuenta Administrador</h1>
                 </div>
                 <div class="span6">
                     <ul class="breadcrumb pull-right">
                         <li><a href="${createLink(uri: '/')}">Inicio</a> <span class="divider">/</span></li>
-                        <li class="active">Alumno</li>
+                        <li class="active">Administrador</li>
                     </ul>
                 </div>
             </div>
@@ -31,23 +31,23 @@
             <div class="span8">
                 <div class="blog">
  <div class="widget widget-popular">
-            <h2>Menu Opciones</h2>
+            <h2 class="menu_cuenta">Menu Opciones</h2>
             <div class="widget-blog-items">
                 <div class="widget-blog-item media">                   
                     <div class="media-body">
-                        <a href="${createLink(controller:'usuario',action:'edit',id:session.user.id)}"><h5>Modificar Cuenta</h5></a>
+                        <a class="opciones"href="${createLink(controller:'usuario',action:'edit',id:session.user.id)}">Modificar Cuenta</a>
                     </div>
                 </div>
 
                 <div class="widget-blog-item media">
                     <div class="media-body">
-                        <a href="${createLink(controller:'peticion',action:'index')}"><h5>Aceptar Peticiones Profesores</h5></a>
+                        <a class="opciones" href="${createLink(controller:'peticion',action:'index')}">Aceptar Peticiones Profesores</a>
                     </div>
                 </div>
 
                 <div class="widget-blog-item media">
                     <div class="media-body">
-                        <a href="${createLink(controller:'peticionAlumno',action:'index')}"><h5>Ver Calificaciones</h5></a>
+                        <a class="opciones" href="${createLink(controller:'peticionAlumno',action:'index')}">Ver Calificaciones</a>
                     </div>
                 </div>
             </div>                        

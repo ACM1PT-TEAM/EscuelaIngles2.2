@@ -31,29 +31,29 @@
             <div class="span8">
                 <div class="blog">
  <div class="widget widget-popular">
-            <h2>Menu Opciones</h2>
+            <h2 class="menu_cuenta">Menu Opciones</h2>
             <div class="widget-blog-items">
                 <div class="widget-blog-item media">                   
                     <div class="media-body">
-                        <a href="${createLink(controller:'profesor',action:'edit',id:session.profesor.id)}"><h5>Modificar Cuenta</h5></a>
+                        <a class="opciones" href="${createLink(controller:'profesor',action:'edit',id:session.profesor.id)}">Modificar Cuenta</a>
                     </div>
                 </div>
 
                 <div class="widget-blog-item media">
                     <div class="media-body">
-                        <a href="${createLink(controller:'profesor',action:'cursosProfesor')}"><h5>Cursos Actuales</h5></a>
+                        <a class="opciones" href="${createLink(controller:'profesor',action:'cursosProfesor')}">Cursos Actuales</a>
                     </div>
                 </div>
 
                 <div class="widget-blog-item media">
                     <div class="media-body">
-                        <a href="${createLink(controller:'peticion',action:'create')}"><h5>Solicitar Curso</h5></a>
+                        <a class="opciones" href="${createLink(controller:'peticion',action:'create')}">Solicitar Curso</a>
                     </div>
                 </div>
 
               <div class="widget-blog-item media">
                     <div class="media-body">
-                        <a href="${createLink(controller:'peticionAlumno',action:'indice')}"><h5>Ver Solicitudes Alumnos</h5></a>
+                        <a class="opciones" href="${createLink(controller:'peticionAlumno',action:'indice')}">Ver Solicitudes Alumnos</a>
                     </div>
                 </div>
             </div>                        

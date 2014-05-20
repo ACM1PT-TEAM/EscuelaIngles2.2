@@ -31,23 +31,23 @@
             <div class="span8">
                 <div class="blog">
  <div class="widget widget-popular">
-            <h2>Menu Opciones</h2>
+            <h2 class="menu_cuenta">Menu Opciones</h2>
             <div class="widget-blog-items">
                 <div class="widget-blog-item media">                   
                     <div class="media-body">
-                        <a href="${createLink(controller:'alumno',action:'edit',id:session.alumno.id)}"><h5>Modificar Cuenta</h5></a>
+                        <a class="opciones"href="${createLink(controller:'alumno',action:'edit',id:session.alumno.id)}">Modificar Cuenta</a>
                     </div>
                 </div>
 
                 <div class="widget-blog-item media">
                     <div class="media-body">
-                        <a href="${createLink(controller:'peticionAlumno',action:'create')}"><h5>Inscribir Curso</h5></a>
+                        <a class="opciones" href="${createLink(controller:'peticionAlumno',action:'create')}">Inscribir Curso</a>
                     </div>
                 </div>
 
                 <div class="widget-blog-item media">
                     <div class="media-body">
-                        <a href="${createLink(controller:'alumno',action:'cursosPasados')}"><h5>Cursos Pasados</h5></a>
+                        <a class="opciones" href="${createLink(controller:'alumno',action:'cursosPasados')}">Cursos Pasados</a>
                     </div>
                 </div>
             </div>                        

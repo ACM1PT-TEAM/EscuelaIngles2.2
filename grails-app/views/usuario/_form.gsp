@@ -1,6 +1,8 @@
 <%@ page import="escuelaingles2.Usuario" %>
 
-
+<div>
+    <p class="instrucciones">Ingrese sus datos</p>
+</div>
 
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'correoElectronico', 'error')} required">
 	<label for="correoElectronico">

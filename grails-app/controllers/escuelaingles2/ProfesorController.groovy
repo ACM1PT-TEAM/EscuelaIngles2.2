@@ -4,6 +4,7 @@ package escuelaingles2
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
+import org.springframework.web.multipart.commons.CommonsMultipartFile
 
 @Transactional(readOnly = true)
 class ProfesorController {
@@ -78,12 +79,48 @@ class ProfesorController {
         }
 
         if (profesorInstance.hasErrors()) {
+            println profesorInstance.errors
             respond profesorInstance.errors, view:'create'
             return
         }
+        
+//        CommonsMultipartFile file = request.getFile('video')        
+//
+//        if( file.empty ){
+//         flash.message = "No se selecciono un archivo"        
+//         respond profesorInstance, view : 'create'   
+//         return
+//        }
+//        //Metodo que genera una secuencia unica de bytes que sera el nombre del archivo (Universally Unique Identifier)
+//        String baseFileName = java.util.UUID.randomUUID().toString();        
+//        def downloadedFile = request.getFile( "video" )
+//        def dirArchivo = "files/"
+//        String mimeType = downloadedFile.contentType
+//        String extension = mimeType.substring(mimeType.lastIndexOf('/') + 1)
+//        // Guardando el archivo en la carpeta files, in the web-app, with the name: baseFileName
+//        String fileUploaded = fileUploadService.uploadFile( downloadedFile, "${baseFileName}"+"."+extension, dirArchivo )
+//        if( fileUploaded ){
+//           profesorInstance.dirArchivo = "${baseFileName}"+"."+extension
+//           profesorInstance.save flush:true
+//           flash.message = message(code: 'default.updated.message', args: [message(code: 'Profesor.label', default: Profesor), profesorInstance.id])
+//           redirect profesorInstance
+//        }
+//        else
+//        {
+//            respond profesorInstance, [status: OK]
+//        }
 
+//        def f = request.getFile('video')
+//        if(f.empty){
+//            flash.message = 'No selecciono ningun archivo'
+//            render(view:'create')
+//            return
+//        }
+//        f.transferTo(new File('/EscuelaIngles2.2/web-app/files/video.mp4'))
+//        profesorInstance.video = video.mp4
+        //response.sendError(200,'Done')
+        
         profesorInstance.save flush:true
-
         request.withFormat {
             form {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'profesorInstance.label', default: 'Profesor'), profesorInstance.id])

@@ -6,15 +6,16 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'curso.label', default: 'Curso')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
+                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
 	</head>
 	<body>
 		<div class="center">
-			<h1>Cursos Disponibles</h1>
+			<h1 class="especial">Cursos Disponibles</h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<div class="table-responsive">
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="peticiones">
 			<thead>
 					<tr>
 					

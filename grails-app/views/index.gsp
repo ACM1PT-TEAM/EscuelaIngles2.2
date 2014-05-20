@@ -79,7 +79,7 @@
         </div>
 
         <div class="row-fluid">
-            <div class="span4">
+            <div class="span4" id="beneficios">
                 <div class="media">
                     <div class="pull-left">
                         <i class="icon-globe icon-medium"></i>
@@ -91,7 +91,7 @@
                 </div>
             </div>            
 
-            <div class="span4">
+            <div class="span4" id="beneficios">
                 <div class="media">
                     <div class="pull-left">
                         <i class="icon-thumbs-up-alt icon-medium"></i>
@@ -103,7 +103,7 @@
                 </div>
             </div>            
 
-            <div class="span4">
+            <div class="span4" id="beneficios">
                 <div class="media">
                     <div class="pull-left">
                         <i class="icon-leaf icon-medium icon-rounded"></i>

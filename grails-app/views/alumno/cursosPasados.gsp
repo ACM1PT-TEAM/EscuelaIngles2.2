@@ -4,8 +4,10 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-	<meta name="layout" content="main"/>
+    <meta name="layout" content="main"/>
     <title>Inicio | Escuela de Ingles ACM1PT</title>
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
+    
 </head>
 
 <body>
@@ -13,7 +15,7 @@
         <div class="container">
             <div class="row-fluid">
                 <div class="span6">
-                    <h1>Cursos Pasados</h1>
+                    <h1 class="especial_2">Cursos Pasados</h1>
                 </div>
                 <div class="span6">
                     <ul class="breadcrumb pull-right">
@@ -27,11 +29,11 @@
     <!-- / .title -->         
 
 		<div class="center">
-			<h1>Cursos Pasados</h1>
+			<h1 class="especial">Cursos Pasados</h1>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<div class="table-responsive">
+			<div class="table-responsive" id="cursos_pasados">
 			<table class="table table-bordered">
 			<thead>
 					<tr>					

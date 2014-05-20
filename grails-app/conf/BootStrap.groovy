@@ -13,7 +13,8 @@ class BootStrap {
 				nombre:"Moises",
 				apellidoPaterno:"Mascapo",
 				apellidoMaterno:"rongas",
-				telefono:"34123456"
+				telefono:"34123456",
+				video:"https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 				)
 
 		p1.save()
@@ -40,7 +41,8 @@ class BootStrap {
 				nombre:"Eduardo",
 				apellidoPaterno:"Sopla",
 				apellidoMaterno:"Velas",
-				telefono:"3412342"
+				telefono:"3412342",
+				video:"https://www.youtube.com/watch?v=kndkJ1Sn8Ew"
 				)
 
 		p2.save()

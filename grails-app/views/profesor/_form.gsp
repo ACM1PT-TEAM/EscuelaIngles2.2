@@ -50,3 +50,11 @@
 	<g:textField name="telefono" value="${profesorInstance?.telefono}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'video', 'error')} ">
+	<label for="video">
+		<g:message code="profesor.video.label" default="Video" />
+		
+	</label>
+	<g:field type="url" name="video" value="${profesorInstance?.video}"/>
+</div>
+

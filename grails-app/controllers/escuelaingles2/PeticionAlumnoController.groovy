@@ -16,7 +16,11 @@ class PeticionAlumnoController {
     }
 
 	def indice() {
-		def lista = PeticionAlumno.findAllByEstado("Pendiente")
+                def prof = Profesor.get(session.profesor.id)
+                def curso = Curso.findAllByProfesor(prof)
+                println curso
+		def lista = PeticionAlumno.findAllByCursoInList(curso)
+                println lista
 		[lista:lista]
     }
 

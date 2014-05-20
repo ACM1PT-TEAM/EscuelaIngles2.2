@@ -5,24 +5,25 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'peticion.label', default: 'Peticion')}" />
-		<title><g:message code="default.show.label" args="[entityName]" /></title>
+		<title>Petición Curso</title>
+                <link rel="stylesheet" href="${resource(dir: 'css', file: 'style.css')}">
 	</head>
 	<body>
-		<a href="#show-peticion" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<!--<a href="#show-peticion" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
-		</div>
+		</div>-->
 		<div id="show-peticion" class="content scaffold-show" role="main">
-			<h1><g:message code="default.show.label" args="[entityName]" /></h1>
+			<h1 class="especial">Petición Curso</h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<ol class="property-list peticion">
-			
+			<ol class="property-list peticion" id="info">
+                                <h2>Datos Petición</h2>
 				<g:if test="${peticionInstance?.nivelCurso}">
 				<li class="fieldcontain">
 					<span id="nivelCurso-label" class="property-label"><g:message code="peticion.nivelCurso.label" default="Nivel Curso" /></span>

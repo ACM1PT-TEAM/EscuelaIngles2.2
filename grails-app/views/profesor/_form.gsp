@@ -57,7 +57,8 @@
 		<g:message code="profesor.video.label" default="Video" />
 		
 	</label>
-	<g:field type="url" name="video" value="${profesorInstance?.video}"/>
+        <input type="file" name="video"/>
+	<!--<g:field type="url" name="video" value="${profesorInstance?.video}"/>-->
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: profesorInstance, field: 'constancia', 'error')} ">

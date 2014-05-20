@@ -84,31 +84,31 @@ class ProfesorController {
             return
         }
         
-//        CommonsMultipartFile file = request.getFile('video')        
-//
-//        if( file.empty ){
-//         flash.message = "No se selecciono un archivo"        
-//         respond profesorInstance, view : 'create'   
-//         return
-//        }
-//        //Metodo que genera una secuencia unica de bytes que sera el nombre del archivo (Universally Unique Identifier)
-//        String baseFileName = java.util.UUID.randomUUID().toString();        
-//        def downloadedFile = request.getFile( "video" )
-//        def dirArchivo = "files/"
-//        String mimeType = downloadedFile.contentType
-//        String extension = mimeType.substring(mimeType.lastIndexOf('/') + 1)
-//        // Guardando el archivo en la carpeta files, in the web-app, with the name: baseFileName
-//        String fileUploaded = fileUploadService.uploadFile( downloadedFile, "${baseFileName}"+"."+extension, dirArchivo )
-//        if( fileUploaded ){
-//           profesorInstance.dirArchivo = "${baseFileName}"+"."+extension
-//           profesorInstance.save flush:true
-//           flash.message = message(code: 'default.updated.message', args: [message(code: 'Profesor.label', default: Profesor), profesorInstance.id])
-//           redirect profesorInstance
-//        }
-//        else
-//        {
-//            respond profesorInstance, [status: OK]
-//        }
+        CommonsMultipartFile file = request.getFile('video')        
+
+        if( file.empty ){
+         flash.message = "No se selecciono un archivo"        
+         respond profesorInstance, view : 'create'   
+         return
+        }
+        //Metodo que genera una secuencia unica de bytes que sera el nombre del archivo (Universally Unique Identifier)
+        String baseFileName = java.util.UUID.randomUUID().toString();        
+        def downloadedFile = request.getFile( "video" )
+        def dirArchivo = "files/"
+        String mimeType = downloadedFile.contentType
+        String extension = mimeType.substring(mimeType.lastIndexOf('/') + 1)
+        // Guardando el archivo en la carpeta files, in the web-app, with the name: baseFileName
+        String fileUploaded = fileUploadService.uploadFile( downloadedFile, "${baseFileName}"+"."+extension, dirArchivo )
+        if( fileUploaded ){
+           profesorInstance.video = "${baseFileName}"+"."+extension
+           profesorInstance.save flush:true
+           flash.message = message(code: 'default.updated.message', args: [message(code: 'Profesor.label', default: Profesor), profesorInstance.id])
+           redirect profesorInstance
+        }
+        else
+        {
+            respond profesorInstance, [status: OK]
+        }
 
 //        def f = request.getFile('video')
 //        if(f.empty){
@@ -120,14 +120,14 @@ class ProfesorController {
 //        profesorInstance.video = video.mp4
         //response.sendError(200,'Done')
         
-        profesorInstance.save flush:true
-        request.withFormat {
-            form {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'profesorInstance.label', default: 'Profesor'), profesorInstance.id])
-				redirect(uri: "/")
-            }
-            '*' { respond profesorInstance, [status: CREATED] }
-        }
+//        profesorInstance.save flush:true
+//        request.withFormat {
+//            form {
+//                flash.message = message(code: 'default.created.message', args: [message(code: 'profesorInstance.label', default: 'Profesor'), profesorInstance.id])
+//				redirect(uri: "/")
+//            }
+//            '*' { respond profesorInstance, [status: CREATED] }
+//        }
     }
 
     def edit(Profesor profesorInstance) {

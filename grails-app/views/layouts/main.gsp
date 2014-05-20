@@ -44,9 +44,11 @@
 		                <ul class="nav">
 		                    <li class="active"><a href="${createLink(uri: '/')}">Inicio</a></li>		                   
 		                    <li><g:link controller="curso" action="indice">Cursos</g:link></li>
+                                    <g:if test="${session.user == null}">
                                     <li class="registro">
 		                        <a data-toggle="modal" href="#registroForm">Registro</a>
 		                    </li>
+                                    </g:if>
 							<g:if test="${session.user == null}">
 				                <li class="login">
 				                    <a data-toggle="modal" href="#loginForm"><i class="icon-lock"></i></a>

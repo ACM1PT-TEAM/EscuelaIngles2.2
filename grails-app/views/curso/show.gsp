@@ -51,14 +51,14 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${cursoInstance?.activo}">
+				<!--<g:if test="${cursoInstance?.activo}">
 				<li class="fieldcontain">
 					<span id="activo-label" class="property-label"><g:message code="curso.activo.label" default="Activo" /></span>
 					
 						<span class="property-value" aria-labelledby="activo-label"><g:formatBoolean boolean="${cursoInstance?.activo}" /></span>
 					
 				</li>
-				</g:if>
+				</g:if>-->
 			
 				<!--<g:if test="${cursoInstance?.peticiones}">
 				<li class="fieldcontain">

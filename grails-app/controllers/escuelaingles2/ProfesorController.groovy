@@ -11,6 +11,8 @@ class ProfesorController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+    def fileUploadService
+    
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Profesor.list(params), model:[profesorInstanceCount: Profesor.count()]
@@ -84,23 +86,48 @@ class ProfesorController {
             return
         }
         
-        CommonsMultipartFile file = request.getFile('video')        
-
+        CommonsMultipartFile file = request.getFile('videoDireccion')        
+        CommonsMultipartFile file2 = request.getFile('constanciaDireccion')        
+        
         if( file.empty ){
-         flash.message = "No se selecciono un archivo"        
+         flash.message = "No se selecciono el archivo de video"        
+         respond profesorInstance, view : 'create'   
+         return
+        }
+        
+        if( file2.empty ){
+         flash.message = "No se selecciono el archivo pdf"        
          respond profesorInstance, view : 'create'   
          return
         }
         //Metodo que genera una secuencia unica de bytes que sera el nombre del archivo (Universally Unique Identifier)
-        String baseFileName = java.util.UUID.randomUUID().toString();        
-        def downloadedFile = request.getFile( "video" )
-        def dirArchivo = "files/"
+        //String baseFileName = java.util.UUID.randomUUID().toString(); 
+        String baseFileName = profesorInstance.toString()+"_video";
+        String baseFileName2 = profesorInstance.toString()+"_constancia";
+        def downloadedFile = request.getFile( "videoDireccion" )
+        def downloadedFile2 = request.getFile( "constanciaDireccion")
+        def dirArchivo = "videos/"
+        def dirArchivo2 = "constancias/"
         String mimeType = downloadedFile.contentType
+        String mimeType2 = downloadedFile2.contentType
+        
         String extension = mimeType.substring(mimeType.lastIndexOf('/') + 1)
+        String extension2 = mimeType2.substring(mimeType2.lastIndexOf('/') + 1)
+        
+        //if(extension.equals("mp4"))
+            String fileUploaded = fileUploadService.uploadFile( downloadedFile, "${baseFileName}"+"."+extension, dirArchivo )
+        //else
+          //  flash.message = "El video debe tener formato mp4"
+            
+       // if(extension2.equals("pdf"))
+            String fileUploaded2 = fileUploadService.uploadFile( downloadedFile2, "${baseFileName2}"+"."+extension2, dirArchivo2 )
+        //else
+          //  flash.message = "La constancia debe tener formato pdf"
         // Guardando el archivo en la carpeta files, in the web-app, with the name: baseFileName
-        String fileUploaded = fileUploadService.uploadFile( downloadedFile, "${baseFileName}"+"."+extension, dirArchivo )
-        if( fileUploaded ){
+        
+        if( fileUploaded){
            profesorInstance.video = "${baseFileName}"+"."+extension
+           profesorInstance.constancia = "${baseFileName2}"+"."+extension2
            profesorInstance.save flush:true
            flash.message = message(code: 'default.updated.message', args: [message(code: 'Profesor.label', default: Profesor), profesorInstance.id])
            redirect profesorInstance
@@ -110,24 +137,6 @@ class ProfesorController {
             respond profesorInstance, [status: OK]
         }
 
-//        def f = request.getFile('video')
-//        if(f.empty){
-//            flash.message = 'No selecciono ningun archivo'
-//            render(view:'create')
-//            return
-//        }
-//        f.transferTo(new File('/EscuelaIngles2.2/web-app/files/video.mp4'))
-//        profesorInstance.video = video.mp4
-        //response.sendError(200,'Done')
-        
-//        profesorInstance.save flush:true
-//        request.withFormat {
-//            form {
-//                flash.message = message(code: 'default.created.message', args: [message(code: 'profesorInstance.label', default: 'Profesor'), profesorInstance.id])
-//				redirect(uri: "/")
-//            }
-//            '*' { respond profesorInstance, [status: CREATED] }
-//        }
     }
 
     def edit(Profesor profesorInstance) {

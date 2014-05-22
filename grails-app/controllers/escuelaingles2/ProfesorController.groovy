@@ -113,29 +113,44 @@ class ProfesorController {
         
         String extension = mimeType.substring(mimeType.lastIndexOf('/') + 1)
         String extension2 = mimeType2.substring(mimeType2.lastIndexOf('/') + 1)
-        
-        //if(extension.equals("mp4"))
-            String fileUploaded = fileUploadService.uploadFile( downloadedFile, "${baseFileName}"+"."+extension, dirArchivo )
-        //else
-          //  flash.message = "El video debe tener formato mp4"
-            
-       // if(extension2.equals("pdf"))
-            String fileUploaded2 = fileUploadService.uploadFile( downloadedFile2, "${baseFileName2}"+"."+extension2, dirArchivo2 )
-        //else
-          //  flash.message = "La constancia debe tener formato pdf"
-        // Guardando el archivo en la carpeta files, in the web-app, with the name: baseFileName
-        
-        if( fileUploaded){
-           profesorInstance.video = "${baseFileName}"+"."+extension
-           profesorInstance.constancia = "${baseFileName2}"+"."+extension2
-           profesorInstance.save flush:true
-           flash.message = message(code: 'default.updated.message', args: [message(code: 'Profesor.label', default: Profesor), profesorInstance.id])
-           redirect profesorInstance
-        }
-        else
+        println extension2
+        println extension
+      
+        if(extension2.equals("pdf") && extension.equals("mp4"))
         {
-            respond profesorInstance, [status: OK]
-        }
+            String fileUploaded = fileUploadService.uploadFile( downloadedFile, "${baseFileName}"+"."+extension, dirArchivo )
+            String fileUploaded2 = fileUploadService.uploadFile( downloadedFile2, "${baseFileName2}"+"."+extension2, dirArchivo2 )
+           
+            if( fileUploaded)
+              profesorInstance.video = "${baseFileName}"+"."+extension
+            else
+                respond profesorInstance, [status: OK]
+           
+            if(fileUploaded2)
+               profesorInstance.constancia = "${baseFileName2}"+"."+extension2
+            else
+                respond profesorInstance, [status: OK]
+            
+            profesorInstance.save flush:true
+            flash.message = message(code: 'default.updated.message', args: [message(code: 'Profesor.label', default: Profesor), profesorInstance.id])
+            redirect profesorInstance
+         
+        }else{
+            flash.message = "El formato de los archivos debe ser mp4(video) y pdf(constancia)"
+            respond profesorInstance, view : 'create'   
+        }// Guardando el archivo en la carpeta files, in the web-app, with the name: baseFileName
+        
+//        if( fileUploaded2){
+//           profesorInstance.video = "${baseFileName}"+"."+extension
+//           profesorInstance.constancia = "${baseFileName2}"+"."+extension2
+//           profesorInstance.save flush:true
+//           flash.message = message(code: 'default.updated.message', args: [message(code: 'Profesor.label', default: Profesor), profesorInstance.id])
+//           redirect profesorInstance
+//        }
+//        else
+//        {
+//            respond profesorInstance, [status: OK]
+//        }
 
     }
 

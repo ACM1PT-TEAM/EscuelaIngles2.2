@@ -12,7 +12,7 @@
  <section class="title">
         <div class="container">
             <div class="row-fluid">
-                <div class="span6">
+                <div class="span6" id="encabezado">
                     <h1>Cuenta Profesor</h1>
                 </div>
                 <div class="span6">

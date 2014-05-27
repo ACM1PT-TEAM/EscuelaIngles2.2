@@ -85,12 +85,27 @@ a:hover,a:focus{color:#005580;text-decoration:underline;}
 .row-fluid .controls-row [class*="span"]+[class*="span"]{margin-left:2.127659574468085%;}
 .row-fluid .span12{width:100%;*width:99.94680851063829%;}
 .row-fluid .span11{width:91.48936170212765%;*width:91.43617021276594%;}
-.row-fluid .span10{width:82.97872340425532%;*width:82.92553191489361%;}
+.row-fluid .span10{
+    width:82.97872340425532%;
+    *width:82.92553191489361%;
+}
+.row-fluid .span10#izq{
+    width:80%;
+    *width:80%;
+}
 .row-fluid .span9{
     width:74.46808510638297%;
     *width:74.41489361702126%;
 }
 .row-fluid .span8{
+    border:5px solid #21A6D8;
+    background-color: #2F96B4;
+    width:35%;
+    *width:35%;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+.row-fluid .span8#video{
     border:5px solid #21A6D8;
     background-color: #2F96B4;
     width: 80%;
@@ -106,6 +121,10 @@ a:hover,a:focus{color:#005580;text-decoration:underline;}
     width:48.93617021276595%;
     *width:48.88297872340425%;
 }
+.row-fluid .span6#encabezado{
+    width:40%;
+    *width:40%;
+}
 .row-fluid .span5{
     width:40.42553191489362%;
       *width:40.37234042553192%;
@@ -119,7 +138,10 @@ a:hover,a:focus{color:#005580;text-decoration:underline;}
     width:30%;
     *width:30%;
 }
-.row-fluid .span3{width:23.404255319148934%;*width:23.351063829787233%;}
+.row-fluid .span3#certificaciones{
+    width:20%;
+    *width:20%;
+}
 .row-fluid .span2{width:14.893617021276595%;*width:14.840425531914894%;}
 .row-fluid .span1{width:6.382978723404255%;*width:6.329787234042553%;}
 .row-fluid .offset12{margin-left:104.25531914893617%;*margin-left:104.14893617021275%;}

@@ -131,17 +131,17 @@
                 </div>
                 <p>Ofrecemos algunas de las siguientes certificiaciones.</p>
             </div>
-            <div class="span10">
+            <div class="span10" id="izq">
                 <div id="myCarousel" class="carousel slide clients">
                   <!-- Carousel items -->
                   <div class="carousel-inner">
                     <div class="active item">
                         <div class="row-fluid">
                             <ul class="thumbnails">
-                                <li class="span3"><a href="#"><img src="images/sample/clients/toefl.gif"></a></li>
-                                <li class="span3"><a href="#"><img src="images/sample/clients/toeic.gif"></a></li>
-                                <li class="span3"><a href="#"><img src="images/sample/clients/PET.jpg"></a></li>
-                                <li class="span3"><a href="#"><img src="images/sample/clients/KET.jpg"></a></li>
+                                <li class="span3" id="certificaciones"><a href="#"><img src="images/sample/clients/toefl.gif"></a></li>
+                                <li class="span3" id="certificaciones"><a href="#"><img src="images/sample/clients/toeic.gif"></a></li>
+                                <li class="span3" id="certificaciones"><a href="#"><img src="images/sample/clients/PET.jpg"></a></li>
+                                <li class="span3" id="certificaciones"><a href="#"><img src="images/sample/clients/KET.jpg"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -149,10 +149,10 @@
                     <div class="item">
                         <div class="row-fluid">
                             <ul class="thumbnails">
-                                <li class="span3"><a href="#"><img src="images/sample/clients/KET.jpg"></a></li>
-                                <li class="span3"><a href="#"><img src="images/sample/clients/PET.jpg"></a></li>
-                                <li class="span3"><a href="#"><img src="images/sample/clients/toeic.gif"></a></li>
-                                <li class="span3"><a href="#"><img src="images/sample/clients/toefl.gif"></a></li>
+                                <li class="span3" id="certificaciones"><a href="#"><img src="images/sample/clients/KET.jpg"></a></li>
+                                <li class="span3" id="certificaciones"><a href="#"><img src="images/sample/clients/PET.jpg"></a></li>
+                                <li class="span3" id="certificaciones"><a href="#"><img src="images/sample/clients/toeic.gif"></a></li>
+                                <li class="span3" id="certificaciones"><a href="#"><img src="images/sample/clients/toefl.gif"></a></li>
                             </ul>
                         </div>
                     </div>

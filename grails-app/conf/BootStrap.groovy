@@ -64,7 +64,7 @@ class BootStrap {
 
 		def c1 = new Curso(
 				nivelCurso:"Basico 1",
-				dias:"Lunes-Viernes",
+				dias:"Lunes",
 				horario:"15-17 pm",
 				activo:true,
 				profesor:p1

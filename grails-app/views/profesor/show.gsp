@@ -20,7 +20,7 @@
 		</g:if>
                 <section id="about-us" class="container main">
                     <div class="row-fluid">
-                        <div class="span8">
+                        <div class="span8" id="video">
                             <div class="blog">
                                 <div class="widget widget-popular">
                                     <h2>Datos Profesor</h2>

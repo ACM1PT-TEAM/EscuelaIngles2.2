@@ -21,11 +21,11 @@
 		<g:javascript src="vendor/modernizr-2.6.2-respond-1.1.0.min.js" />
 
 		<!-- Le fav and touch icons -->
-		<link rel="shortcut icon" href="images/ico/favicon.ico">
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-		<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="images/ico/logo.png">
+		<link rel="apple-touch-icon-precomposed" sizes="57x27" href="images/ico/logo.png">
+		<link rel="apple-touch-icon-precomposed" sizes="57x27" href="images/ico/logo.png">
+		<link rel="apple-touch-icon-precomposed" sizes="57x27" href="images/ico/logo.png">
+		<link rel="apple-touch-icon-precomposed" href="images/ico/logo.png">
 		<g:layoutHead/>
 		<g:javascript library="application"/>		
 		<r:layoutResources />
@@ -109,7 +109,7 @@
             </label>-->
             <button type="submit" class="btn btn-primary">Entrar</button>
         </g:form>	
-        <a href="#">Olvidaste tu contraseña?</a>
+        <!--<a href="#">Olvidaste tu contraseña?</a>-->
     </div>
     <!--/Modal Body-->
 </div>
@@ -164,7 +164,7 @@
             </div>
             <!--/Copyright-->
 
-            <div class="span6">
+            <div class="span6" id="social">
                 <ul class="social pull-right">
                     <li><a href="#"><i class="icon-facebook"></i></a></li>
                     <li><a href="#"><i class="icon-twitter"></i></a></li>

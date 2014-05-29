@@ -15,7 +15,7 @@
                 <div class="span6">
                     <h1>Cuenta Alumno</h1>
                 </div>
-                <div class="span6">
+                <div class="span6" id="encabezado">
                     <ul class="breadcrumb pull-right">
                         <li><a href="${createLink(uri: '/')}">Inicio</a> <span class="divider">/</span></li>
                         <li class="active">Alumno</li>
@@ -47,7 +47,7 @@
 
                 <div class="widget-blog-item media">
                     <div class="media-body">
-                        <a class="opciones" href="${createLink(controller:'alumno',action:'cursosPasados')}">Cursos Pasados</a>
+                        <a class="opciones" href="${createLink(controller:'alumno',action:'cursosPasados')}">Tus Cursos</a>
                     </div>
                 </div>
             </div>                        
@@ -83,12 +83,21 @@
 						        </div>
 						    </div>
 
-						    <div class="widget-blog-item media">                   
+                                                    <div class="widget-blog-item media">                   
 						        <div class="media-body">
 						            <h5>Apellido Materno: ${fieldValue(bean: alumnoInstance, field: "apellidoMaterno")}</h5>
 						        </div>
 						    </div>
-
+                                                    <div class="widget-blog-item media">                   
+						        <div class="media-body">
+						            <h5>Correo Electrónico: ${fieldValue(bean: alumnoInstance, field: "correoElectronico")}</h5>
+						        </div>
+						    </div>
+                                                    <div class="widget-blog-item media">                   
+						        <div class="media-body">
+						            <h5>Contraseña: ${fieldValue(bean: alumnoInstance, field: "password")}</h5>
+						        </div>
+						    </div>
 						    <div class="widget-blog-item media">                   
 						        <div class="media-body">
 									<h5>Telefono: ${fieldValue(bean: alumnoInstance, field: "telefono")}</h5>

@@ -7,12 +7,12 @@
 	</head>
 	<body>
 		<div class="body">
-			<h1>Login</h1>
+			<h1 class="especial_1">Login</h1>
 			<g:if test="${flash.message}">
 				<div class="message">${flash.message}</div>
 			</g:if>
 			<g:form action="authenticate" method="post" >
-				<div class="dialog">
+				<div class="dialog_1">
 					<table>
 						<tbody>
 							<tr class="prop">
@@ -36,7 +36,7 @@
 				</div>
 				<div class="buttons">
 					<span class="button">
-						<input type="submit" value="Login" />
+						<input type="submit" value="Login" id="login" />
 					</span>
 				</div>
 			</g:form>

@@ -117,6 +117,11 @@ a:hover,a:focus{color:#005580;text-decoration:underline;}
     width:57.44680851063829%;
     *width:57.39361702127659%;
 }
+.span6#social
+{
+    width:40%;
+    *width:40%;
+}
 .row-fluid .span6{
     width:48.93617021276595%;
     *width:48.88297872340425%;

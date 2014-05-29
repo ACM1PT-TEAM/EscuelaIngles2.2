@@ -14,7 +14,7 @@
  <section class="title">
         <div class="container">
             <div class="row-fluid">
-                <div class="span6">
+                <div class="span6" id="encabezado">
                     <h1 class="especial_2">Cursos Pasados</h1>
                 </div>
                 <div class="span6">
@@ -34,7 +34,7 @@
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<div class="table-responsive" id="cursos_pasados">
-			<table class="table table-bordered">
+			<table class="table table-bordered" id="peticiones">
 			<thead>
 					<tr>					
 						<th>Cursos</th>
@@ -55,6 +55,9 @@
 						<g:if test="${cursoInstance.calificacion>5}">
 							<td><g:link action="renderFormPDF" params="[nombre:session.alumno, curso:cursoInstance.cursoNombre(), calificacion:cursoInstance.calificacion]">Generar Constancia</g:link></td>					
 						</g:if>
+                                                <g:else>
+                                                    <td>No Disponible</td>
+                                                </g:else>
 					</tr>
 				</g:each>
 				</tbody>

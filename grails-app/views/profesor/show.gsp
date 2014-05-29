@@ -51,7 +51,14 @@
                         <h5>Correo Electronico: ${profesorInstance?.correoElectronico}</h5>
                     </div>
                 </div>
-            </div>	
+            </div>
+            <div class="widget-blog-items">
+                <div class="widget-blog-item media">
+                    <div class="media-body">
+                        <h5>Contraseña: ${profesorInstance?.contraseña}</h5>
+                    </div>
+                </div>
+            </div>
             <div class="widget widget-popular">
                 <div class="widget-blog-items">
                   <h5>Video Profesor:</h5></br>

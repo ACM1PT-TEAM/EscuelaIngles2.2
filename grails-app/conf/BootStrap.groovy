@@ -63,7 +63,7 @@ class BootStrap {
 		}
 
 		def c1 = new Curso(
-				nivelCurso:"Basico 1",
+				nivelCurso:"Basico",
 				dias:"Lunes",
 				horario:"15-17 pm",
 				activo:true,
@@ -73,7 +73,7 @@ class BootStrap {
 		c1.save()
 
 		def c2 = new Curso(
-				nivelCurso:"Intermedio 1",
+				nivelCurso:"Intermedio",
 				dias:"Sabado",
 				horario:"15-17 pm",
 				activo:false,

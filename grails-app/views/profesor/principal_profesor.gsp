@@ -38,7 +38,6 @@
                         <a class="opciones" href="${createLink(controller:'profesor',action:'edit',id:session.profesor.id)}">Modificar Cuenta</a>
                     </div>
                 </div>
-
                 <div class="widget-blog-item media">
                     <div class="media-body">
                         <a class="opciones" href="${createLink(controller:'profesor',action:'cursosProfesor')}">Cursos Actuales</a>
@@ -94,7 +93,16 @@
 						            <h5>Apellido Materno: ${fieldValue(bean: alumnoInstance, field: "apellidoMaterno")}</h5>
 						        </div>
 						    </div>
-
+                                                    <div class="widget-blog-item media">                   
+						        <div class="media-body">
+						            <h5>Correo Electronico: ${fieldValue(bean: alumnoInstance, field: "correoElectronico")}</h5>
+						        </div>
+						    </div>
+                                                     <div class="widget-blog-item media">                   
+						        <div class="media-body">
+						            <h5>Contraseña: ${fieldValue(bean: alumnoInstance, field: "password")}</h5>
+						        </div>
+						    </div>                                                       
 						    <div class="widget-blog-item media">                   
 						        <div class="media-body">
 									<h5>Telefono: ${fieldValue(bean: alumnoInstance, field: "telefono")}</h5>

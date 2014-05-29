@@ -20,7 +20,7 @@
             <div class="sl-slide item1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                 <div class="sl-slide-inner">
                     <div class="container">
-                        <img class="pull-right" src="images/sample/slider/img1.png" alt="" />
+                        <img class="pull-right" src="images/sample/slider/img4.png" alt="" />
                         <h2>Aprende ingles!</h2>
                         <h3 class="gap">No lo pienses más</h3>
                         <a class="btn btn-large btn-transparent" href="${createLink(uri: '/alumno/create')}">Inscribete ya</a>
@@ -46,7 +46,7 @@
             <div class="sl-slide item3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
                 <div class="sl-slide-inner">
                    <div class="container">
-                    <img class="pull-right" src="images/sample/slider/img3.png" alt="" />
+                    <img class="pull-right" src="images/sample/slider/img1.png" alt="" />
                     <h2>¿Eres profesor?</h2>
                     <h3 class="gap">Forma parte de nuestro equipo</h3>
                     <a class="btn btn-large btn-transparent" href="${createLink(uri: '/profesor/create')}">Impartir curso</a>
